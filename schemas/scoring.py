@@ -6,7 +6,7 @@ class AnswerSubmit(BaseModel):
     user_id: UUID
     question_id: UUID
     answer: str
-    timestamp: float  # Unix timestamp (e.g., time.time())
+    timestamp: float
 
 class ScoreResponse(BaseModel):
     correct: bool
