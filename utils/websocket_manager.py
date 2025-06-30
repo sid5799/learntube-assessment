@@ -6,9 +6,6 @@ class WebSocketConnectionManager:
         await websocket.accept()
         self.active_connections.setdefault(match_id, []).append(websocket)
 
-    async def disconnect(self, match_id: str, user_id: str):
-        # Clean up logic here
-        pass
 
     async def broadcast_to_match(self, match_id: str, message: dict):
         for ws in self.active_connections.get(match_id, []):
